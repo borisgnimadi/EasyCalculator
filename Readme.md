@@ -1,0 +1,1 @@
+Il s'agit d'une calculatrice simple pour les calculs du quotidien
