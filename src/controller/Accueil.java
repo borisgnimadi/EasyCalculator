@@ -41,8 +41,8 @@ public class Accueil extends HttpServlet {
 		if (path.contains("calculatrice") ) {
 			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/index.jsp");
 			
-			String num1 = !(request.getParameter("num1").equals(null)||request.getParameter("num1").equals("")) ? request.getParameter("num1") : "0" ;
-			String num2 = !(request.getParameter("num2").equals(null)||request.getParameter("num2").equals("")) ? request.getParameter("num2") : "0" ;
+			String num1 = !(request.getParameter("num1").equals(null)||request.getParameter("num1").isEmpty()) ? request.getParameter("num1") : "0" ;
+			String num2 = !(request.getParameter("num2").equals(null)||request.getParameter("num2").isEmpty()) ? request.getParameter("num2") : "0" ;
 			String signe = !request.getParameter("signe").equals(null) ? request.getParameter("signe") : null ;
 			
 			Double result = Calculatrice.calculate(num1, num2, signe);
